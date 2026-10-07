@@ -1,15 +1,20 @@
 # tally-tools
 
-Two small Node.js CLIs for [Tally.so](https://tally.so):
+Two small Node.js CLIs for [Tally.so](https://tally.so), written as research (not used in production):
 
 - **`create-form.js`** — builds a complete Tally form from a short JSON spec: questions, intro text, page breaks, hidden UTM fields and a completion redirect.
 - **`export-submissions.js`** — exports every submission of a form to CSV, **including hidden fields like UTMs**, through the API — so it works regardless of the Tally plan.
 
 Zero dependencies (Node 18+ `fetch`).
 
+| | |
+|---|---|
+| **Status** | Research. Built to explore the Tally API; not used in production |
+| **Build time** | A few hours |
+
 ## Why
 
-Building long forms by hand in Tally's editor is slow and easy to get wrong, and the same form was needed again and again with small changes (one per event or campaign). Describing a form as JSON makes it reviewable, reusable and versionable. The export closes the loop: every lead comes out with the campaign it came from.
+Building long forms by hand in Tally's editor is slow and easy to get wrong, and signup forms tend to be rebuilt again and again with small changes (one per event or campaign). This was an experiment in whether that could be automated. Describing a form as JSON makes it reviewable, reusable and versionable. The export closes the loop: every lead comes out with the campaign it came from.
 
 ## Usage
 
@@ -53,6 +58,10 @@ Two smaller quirks are handled too:
 
 - Tally's submissions API names a choice question after its **first option block**, so `create-form.js` gives every option in a group the same clean name — the export then gets a readable column header instead of the first answer's text.
 - The API returns all hidden fields as **one grouped answer**; `export-submissions.js` splits it into one column per hidden field (one per UTM), paginates through every submission, and writes a UTF-8 BOM so Excel opens accents correctly.
+
+## How it was built
+
+Built with AI coding agents (Claude Code and OpenAI Codex) writing the code. My part was the investigation itself: testing the API, finding the redirect behaviour described above and deciding what the scripts should do.
 
 ---
 
