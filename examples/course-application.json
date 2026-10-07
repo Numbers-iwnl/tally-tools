@@ -1,0 +1,94 @@
+{
+  "title": "Inscrição — Curso de Extensão",
+  "intro": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Garanta sua vaga"
+    },
+    {
+      "type": "text",
+      "text": "Preencha seus dados. A equipe entra em contato em até 2 dias úteis."
+    }
+  ],
+  "hiddenFields": [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term"
+  ],
+  "settings": {
+    "hasProgressBar": true,
+    "language": "pt-BR",
+    "redirectOnCompletion": {
+      "url": "https://example.com/obrigado/",
+      "passHiddenFields": [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_content",
+        "utm_term"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "type": "text",
+      "name": "nome",
+      "label": "Qual é o seu nome?",
+      "helper": "Nome e sobrenome",
+      "required": true
+    },
+    {
+      "type": "phone",
+      "name": "whatsapp",
+      "label": "Seu WhatsApp",
+      "defaultCountryCode": "BR",
+      "required": true
+    },
+    {
+      "type": "email",
+      "name": "email",
+      "label": "Seu e-mail",
+      "required": true
+    },
+    {
+      "type": "choice",
+      "name": "experiencia",
+      "label": "Há quanto tempo você atua na área?",
+      "required": true,
+      "options": [
+        "Ainda estou estudando",
+        "Menos de 2 anos",
+        "2 a 5 anos",
+        "Mais de 5 anos"
+      ]
+    },
+    {
+      "type": "choice",
+      "name": "formato",
+      "label": "Qual formato você prefere?",
+      "required": true,
+      "options": [
+        "Presencial",
+        "Online ao vivo",
+        "Gravado"
+      ]
+    },
+    {
+      "type": "text",
+      "name": "cidade_estado",
+      "label": "Cidade / estado",
+      "helper": "Exemplo: Recife/PE",
+      "required": true
+    },
+    {
+      "type": "textarea",
+      "name": "objetivo",
+      "label": "O que você espera aprender no curso?",
+      "required": true,
+      "pageBreak": true
+    }
+  ]
+}

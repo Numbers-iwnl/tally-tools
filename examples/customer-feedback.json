@@ -1,0 +1,23 @@
+{
+  "title": "Customer Feedback",
+  "settings": {
+    "hasProgressBar": true
+  },
+  "questions": [
+    { "type": "text", "label": "What is your name?", "required": true },
+    { "type": "email", "label": "Your email address", "required": true },
+    {
+      "type": "choice",
+      "label": "How satisfied are you with our product?",
+      "required": true,
+      "options": ["Very satisfied", "Satisfied", "Neutral", "Unsatisfied"]
+    },
+    {
+      "type": "checkboxes",
+      "label": "Which features do you use?",
+      "options": ["Dashboard", "Reports", "Integrations", "Mobile app"]
+    },
+    { "type": "rating", "label": "Rate your overall experience", "stars": 5 },
+    { "type": "textarea", "label": "Any additional comments?", "required": false }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "tally-tools",
+  "version": "1.0.0",
+  "description": "Create Tally.so forms from JSON specs and export every submission (UTMs included) to CSV.",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "bin": {
+    "tally-create": "./create-form.js",
+    "tally-export": "./export-submissions.js"
+  },
+  "scripts": {
+    "create": "node create-form.js",
+    "export": "node export-submissions.js",
+    "check": "node --check create-form.js && node --check export-submissions.js"
+  }
+}
